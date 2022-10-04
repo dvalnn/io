@@ -1,0 +1,22 @@
+\* Escolha_de_locais *\
+Minimize
+OBJ: l_1 + l_2 + l_3 + l_4 + l_5 + l_6 + l_7
+Subject To
+_C1: l_2 + l_4 + l_7 >= 1
+_C2: l_1 + l_6 + l_7 >= 1
+_C3: l_2 + l_6 + l_7 >= 1
+_C4: l_2 + l_3 + l_5 + l_6 >= 1
+_C5: l_1 + l_3 + l_5 >= 1
+_C6: l_1 + l_4 + l_6 >= 1
+_C7: l_1 + l_7 >= 1
+_C8: l_3 + l_4 + l_5 >= 1
+_C9: l_1 + l_5 >= 1
+Binaries
+l_1
+l_2
+l_3
+l_4
+l_5
+l_6
+l_7
+End

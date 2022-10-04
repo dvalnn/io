@@ -1,0 +1,26 @@
+\* Escolha_de_locais *\
+Minimize
+OBJ: l_1 + l_2 + l_3 + l_4 + l_5 + l_6 + l_7
+Subject To
+Zone_1_must_be_covered: l_2 + l_4 + l_7 >= 1
+Zone_2_must_be_covered: l_1 + l_6 + l_7 >= 1
+Zone_3_must_be_covered: l_2 + l_6 + l_7 >= 1
+Zone_4_must_be_covered: l_2 + l_3 + l_5 + l_6 >= 1
+Zone_5_must_be_covered: l_1 + l_3 + l_5 >= 1
+Zone_6_must_be_covered: l_1 + l_4 + l_6 >= 1
+Zone_7_must_be_covered: l_1 + l_7 >= 1
+Zone_8_must_be_covered: l_3 + l_4 + l_5 >= 1
+Zone_9_must_be_covered: l_1 + l_5 >= 1
+extra_1: l_1 + l_3 + l_4 >= 2
+extra_2: l_5 + l_6 + l_7 = 2
+extra_3: l_3 + l_4 <= 1
+extra_4: - l_2 + l_7 >= 0
+Binaries
+l_1
+l_2
+l_3
+l_4
+l_5
+l_6
+l_7
+End

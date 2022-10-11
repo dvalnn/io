@@ -56,4 +56,4 @@ if status == pulp.LpStatusOptimal:
             print("\n")
         print("------------------")
     model.writeLP("relogiosLP")
-    pass
+    

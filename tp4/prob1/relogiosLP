@@ -1,0 +1,222 @@
+\* relogios_para_o_aeroporto *\
+Maximize
+OBJ: - 120 Existe_produção_do_modelo_0 - 100 Existe_produção_do_modelo_1
+ - 75 Existe_produção_do_modelo_2 - 200 Existe_produção_do_modelo_3
+ + 17 produção_de_i_para_venda_em_j_(0,_0)
+ + 17 produção_de_i_para_venda_em_j_(0,_1)
+ + 23 produção_de_i_para_venda_em_j_(0,_2)
+ + 23 produção_de_i_para_venda_em_j_(0,_3)
+ + 23 produção_de_i_para_venda_em_j_(0,_4)
+ + 25 produção_de_i_para_venda_em_j_(0,_5)
+ + 29 produção_de_i_para_venda_em_j_(1,_0)
+ + 29 produção_de_i_para_venda_em_j_(1,_1)
+ + 36 produção_de_i_para_venda_em_j_(1,_2)
+ + 36 produção_de_i_para_venda_em_j_(1,_3)
+ + 36 produção_de_i_para_venda_em_j_(1,_4)
+ + 36 produção_de_i_para_venda_em_j_(1,_5)
+ + 23 produção_de_i_para_venda_em_j_(2,_0)
+ + 23 produção_de_i_para_venda_em_j_(2,_1)
+ + 33 produção_de_i_para_venda_em_j_(2,_2)
+ + 33 produção_de_i_para_venda_em_j_(2,_3)
+ + 33 produção_de_i_para_venda_em_j_(2,_4)
+ + 38 produção_de_i_para_venda_em_j_(2,_5)
+ + 17 produção_de_i_para_venda_em_j_(3,_0)
+ + 17 produção_de_i_para_venda_em_j_(3,_1)
+ + 23 produção_de_i_para_venda_em_j_(3,_2)
+ + 23 produção_de_i_para_venda_em_j_(3,_3)
+ + 23 produção_de_i_para_venda_em_j_(3,_4)
+ + 19 produção_de_i_para_venda_em_j_(3,_5)
+Subject To
+Capacidade_Máxima_de_Produção0:
+ 0.0166666666667 produção_de_i_para_venda_em_j_(0,_0)
+ + 0.0166666666667 produção_de_i_para_venda_em_j_(0,_1)
+ + 0.0166666666667 produção_de_i_para_venda_em_j_(0,_2)
+ + 0.0166666666667 produção_de_i_para_venda_em_j_(0,_3)
+ + 0.0166666666667 produção_de_i_para_venda_em_j_(0,_4)
+ + 0.0166666666667 produção_de_i_para_venda_em_j_(0,_5) <= 1
+Capacidade_Máxima_de_Produção1:
+ 0.0285714285714 produção_de_i_para_venda_em_j_(1,_0)
+ + 0.0285714285714 produção_de_i_para_venda_em_j_(1,_1)
+ + 0.0285714285714 produção_de_i_para_venda_em_j_(1,_2)
+ + 0.0285714285714 produção_de_i_para_venda_em_j_(1,_3)
+ + 0.0285714285714 produção_de_i_para_venda_em_j_(1,_4)
+ + 0.0285714285714 produção_de_i_para_venda_em_j_(1,_5) <= 1
+Capacidade_Máxima_de_Produção2: 0.05 produção_de_i_para_venda_em_j_(2,_0)
+ + 0.05 produção_de_i_para_venda_em_j_(2,_1)
+ + 0.05 produção_de_i_para_venda_em_j_(2,_2)
+ + 0.05 produção_de_i_para_venda_em_j_(2,_3)
+ + 0.05 produção_de_i_para_venda_em_j_(2,_4)
+ + 0.05 produção_de_i_para_venda_em_j_(2,_5) <= 1
+Capacidade_Máxima_de_Produção3:
+ 0.0666666666667 produção_de_i_para_venda_em_j_(3,_0)
+ + 0.0666666666667 produção_de_i_para_venda_em_j_(3,_1)
+ + 0.0666666666667 produção_de_i_para_venda_em_j_(3,_2)
+ + 0.0666666666667 produção_de_i_para_venda_em_j_(3,_3)
+ + 0.0666666666667 produção_de_i_para_venda_em_j_(3,_4)
+ + 0.0666666666667 produção_de_i_para_venda_em_j_(3,_5) <= 1
+Não_repetir_modelo_0_no_terminal_1: existe_venda_de_i_em_j_(0,_0)
+ + existe_venda_de_i_em_j_(0,_1) <= 1
+Não_repetir_modelo_0_no_terminal_2: existe_venda_de_i_em_j_(0,_2)
+ + existe_venda_de_i_em_j_(0,_3) + existe_venda_de_i_em_j_(0,_4) <= 1
+Não_repetir_modelo_1_no_terminal_1: existe_venda_de_i_em_j_(1,_0)
+ + existe_venda_de_i_em_j_(1,_1) <= 1
+Não_repetir_modelo_1_no_terminal_2: existe_venda_de_i_em_j_(1,_2)
+ + existe_venda_de_i_em_j_(1,_3) + existe_venda_de_i_em_j_(1,_4) <= 1
+Não_repetir_modelo_2_no_terminal_1: existe_venda_de_i_em_j_(2,_0)
+ + existe_venda_de_i_em_j_(2,_1) <= 1
+Não_repetir_modelo_2_no_terminal_2: existe_venda_de_i_em_j_(2,_2)
+ + existe_venda_de_i_em_j_(2,_3) + existe_venda_de_i_em_j_(2,_4) <= 1
+Não_repetir_modelo_3_no_terminal_1: existe_venda_de_i_em_j_(3,_0)
+ + existe_venda_de_i_em_j_(3,_1) <= 1
+Não_repetir_modelo_3_no_terminal_2: existe_venda_de_i_em_j_(3,_2)
+ + existe_venda_de_i_em_j_(3,_3) + existe_venda_de_i_em_j_(3,_4) <= 1
+Se_x00_então_w0: - 1000000 Existe_produção_do_modelo_0
+ + produção_de_i_para_venda_em_j_(0,_0) <= 0
+Se_x00_então_y00: - 1000000 existe_venda_de_i_em_j_(0,_0)
+ + produção_de_i_para_venda_em_j_(0,_0) <= 0
+Se_x01_então_w0: - 1000000 Existe_produção_do_modelo_0
+ + produção_de_i_para_venda_em_j_(0,_1) <= 0
+Se_x01_então_y01: - 1000000 existe_venda_de_i_em_j_(0,_1)
+ + produção_de_i_para_venda_em_j_(0,_1) <= 0
+Se_x02_então_w0: - 1000000 Existe_produção_do_modelo_0
+ + produção_de_i_para_venda_em_j_(0,_2) <= 0
+Se_x02_então_y02: - 1000000 existe_venda_de_i_em_j_(0,_2)
+ + produção_de_i_para_venda_em_j_(0,_2) <= 0
+Se_x03_então_w0: - 1000000 Existe_produção_do_modelo_0
+ + produção_de_i_para_venda_em_j_(0,_3) <= 0
+Se_x03_então_y03: - 1000000 existe_venda_de_i_em_j_(0,_3)
+ + produção_de_i_para_venda_em_j_(0,_3) <= 0
+Se_x04_então_w0: - 1000000 Existe_produção_do_modelo_0
+ + produção_de_i_para_venda_em_j_(0,_4) <= 0
+Se_x04_então_y04: - 1000000 existe_venda_de_i_em_j_(0,_4)
+ + produção_de_i_para_venda_em_j_(0,_4) <= 0
+Se_x05_então_w0: - 1000000 Existe_produção_do_modelo_0
+ + produção_de_i_para_venda_em_j_(0,_5) <= 0
+Se_x05_então_y05: - 1000000 existe_venda_de_i_em_j_(0,_5)
+ + produção_de_i_para_venda_em_j_(0,_5) <= 0
+Se_x10_então_w1: - 1000000 Existe_produção_do_modelo_1
+ + produção_de_i_para_venda_em_j_(1,_0) <= 0
+Se_x10_então_y10: - 1000000 existe_venda_de_i_em_j_(1,_0)
+ + produção_de_i_para_venda_em_j_(1,_0) <= 0
+Se_x11_então_w1: - 1000000 Existe_produção_do_modelo_1
+ + produção_de_i_para_venda_em_j_(1,_1) <= 0
+Se_x11_então_y11: - 1000000 existe_venda_de_i_em_j_(1,_1)
+ + produção_de_i_para_venda_em_j_(1,_1) <= 0
+Se_x12_então_w1: - 1000000 Existe_produção_do_modelo_1
+ + produção_de_i_para_venda_em_j_(1,_2) <= 0
+Se_x12_então_y12: - 1000000 existe_venda_de_i_em_j_(1,_2)
+ + produção_de_i_para_venda_em_j_(1,_2) <= 0
+Se_x13_então_w1: - 1000000 Existe_produção_do_modelo_1
+ + produção_de_i_para_venda_em_j_(1,_3) <= 0
+Se_x13_então_y13: - 1000000 existe_venda_de_i_em_j_(1,_3)
+ + produção_de_i_para_venda_em_j_(1,_3) <= 0
+Se_x14_então_w1: - 1000000 Existe_produção_do_modelo_1
+ + produção_de_i_para_venda_em_j_(1,_4) <= 0
+Se_x14_então_y14: - 1000000 existe_venda_de_i_em_j_(1,_4)
+ + produção_de_i_para_venda_em_j_(1,_4) <= 0
+Se_x15_então_w1: - 1000000 Existe_produção_do_modelo_1
+ + produção_de_i_para_venda_em_j_(1,_5) <= 0
+Se_x15_então_y15: - 1000000 existe_venda_de_i_em_j_(1,_5)
+ + produção_de_i_para_venda_em_j_(1,_5) <= 0
+Se_x20_então_w2: - 1000000 Existe_produção_do_modelo_2
+ + produção_de_i_para_venda_em_j_(2,_0) <= 0
+Se_x20_então_y20: - 1000000 existe_venda_de_i_em_j_(2,_0)
+ + produção_de_i_para_venda_em_j_(2,_0) <= 0
+Se_x21_então_w2: - 1000000 Existe_produção_do_modelo_2
+ + produção_de_i_para_venda_em_j_(2,_1) <= 0
+Se_x21_então_y21: - 1000000 existe_venda_de_i_em_j_(2,_1)
+ + produção_de_i_para_venda_em_j_(2,_1) <= 0
+Se_x22_então_w2: - 1000000 Existe_produção_do_modelo_2
+ + produção_de_i_para_venda_em_j_(2,_2) <= 0
+Se_x22_então_y22: - 1000000 existe_venda_de_i_em_j_(2,_2)
+ + produção_de_i_para_venda_em_j_(2,_2) <= 0
+Se_x23_então_w2: - 1000000 Existe_produção_do_modelo_2
+ + produção_de_i_para_venda_em_j_(2,_3) <= 0
+Se_x23_então_y23: - 1000000 existe_venda_de_i_em_j_(2,_3)
+ + produção_de_i_para_venda_em_j_(2,_3) <= 0
+Se_x24_então_w2: - 1000000 Existe_produção_do_modelo_2
+ + produção_de_i_para_venda_em_j_(2,_4) <= 0
+Se_x24_então_y24: - 1000000 existe_venda_de_i_em_j_(2,_4)
+ + produção_de_i_para_venda_em_j_(2,_4) <= 0
+Se_x25_então_w2: - 1000000 Existe_produção_do_modelo_2
+ + produção_de_i_para_venda_em_j_(2,_5) <= 0
+Se_x25_então_y25: - 1000000 existe_venda_de_i_em_j_(2,_5)
+ + produção_de_i_para_venda_em_j_(2,_5) <= 0
+Se_x30_então_w3: - 1000000 Existe_produção_do_modelo_3
+ + produção_de_i_para_venda_em_j_(3,_0) <= 0
+Se_x30_então_y30: - 1000000 existe_venda_de_i_em_j_(3,_0)
+ + produção_de_i_para_venda_em_j_(3,_0) <= 0
+Se_x31_então_w3: - 1000000 Existe_produção_do_modelo_3
+ + produção_de_i_para_venda_em_j_(3,_1) <= 0
+Se_x31_então_y31: - 1000000 existe_venda_de_i_em_j_(3,_1)
+ + produção_de_i_para_venda_em_j_(3,_1) <= 0
+Se_x32_então_w3: - 1000000 Existe_produção_do_modelo_3
+ + produção_de_i_para_venda_em_j_(3,_2) <= 0
+Se_x32_então_y32: - 1000000 existe_venda_de_i_em_j_(3,_2)
+ + produção_de_i_para_venda_em_j_(3,_2) <= 0
+Se_x33_então_w3: - 1000000 Existe_produção_do_modelo_3
+ + produção_de_i_para_venda_em_j_(3,_3) <= 0
+Se_x33_então_y33: - 1000000 existe_venda_de_i_em_j_(3,_3)
+ + produção_de_i_para_venda_em_j_(3,_3) <= 0
+Se_x34_então_w3: - 1000000 Existe_produção_do_modelo_3
+ + produção_de_i_para_venda_em_j_(3,_4) <= 0
+Se_x34_então_y34: - 1000000 existe_venda_de_i_em_j_(3,_4)
+ + produção_de_i_para_venda_em_j_(3,_4) <= 0
+Se_x35_então_w3: - 1000000 Existe_produção_do_modelo_3
+ + produção_de_i_para_venda_em_j_(3,_5) <= 0
+Se_x35_então_y35: - 1000000 existe_venda_de_i_em_j_(3,_5)
+ + produção_de_i_para_venda_em_j_(3,_5) <= 0
+Venda_max_de_0_em_0: produção_de_i_para_venda_em_j_(0,_0) <= 10
+Venda_max_de_0_em_1: produção_de_i_para_venda_em_j_(0,_1) <= 12
+Venda_max_de_0_em_2: produção_de_i_para_venda_em_j_(0,_2) <= 8
+Venda_max_de_0_em_3: produção_de_i_para_venda_em_j_(0,_3) <= 20
+Venda_max_de_0_em_4: produção_de_i_para_venda_em_j_(0,_4) <= 15
+Venda_max_de_0_em_5: produção_de_i_para_venda_em_j_(0,_5) <= 10
+Venda_max_de_1_em_0: produção_de_i_para_venda_em_j_(1,_0) <= 15
+Venda_max_de_1_em_1: produção_de_i_para_venda_em_j_(1,_1) <= 10
+Venda_max_de_1_em_2: produção_de_i_para_venda_em_j_(1,_2) <= 5
+Venda_max_de_1_em_3: produção_de_i_para_venda_em_j_(1,_3) <= 9
+Venda_max_de_1_em_4: produção_de_i_para_venda_em_j_(1,_4) <= 8
+Venda_max_de_1_em_5: produção_de_i_para_venda_em_j_(1,_5) <= 5
+Venda_max_de_2_em_0: produção_de_i_para_venda_em_j_(2,_0) <= 8
+Venda_max_de_2_em_1: produção_de_i_para_venda_em_j_(2,_1) <= 6
+Venda_max_de_2_em_2: produção_de_i_para_venda_em_j_(2,_2) <= 5
+Venda_max_de_2_em_3: produção_de_i_para_venda_em_j_(2,_3) <= 7
+Venda_max_de_2_em_4: produção_de_i_para_venda_em_j_(2,_4) <= 4
+Venda_max_de_2_em_5: produção_de_i_para_venda_em_j_(2,_5) <= 2
+Venda_max_de_3_em_0: produção_de_i_para_venda_em_j_(3,_0) <= 4
+Venda_max_de_3_em_1: produção_de_i_para_venda_em_j_(3,_1) <= 3
+Venda_max_de_3_em_2: produção_de_i_para_venda_em_j_(3,_2) <= 7
+Venda_max_de_3_em_3: produção_de_i_para_venda_em_j_(3,_3) <= 2
+Venda_max_de_3_em_4: produção_de_i_para_venda_em_j_(3,_4) <= 2
+Venda_max_de_3_em_5: produção_de_i_para_venda_em_j_(3,_5) <= 1
+Binaries
+Existe_produção_do_modelo_0
+Existe_produção_do_modelo_1
+Existe_produção_do_modelo_2
+Existe_produção_do_modelo_3
+existe_venda_de_i_em_j_(0,_0)
+existe_venda_de_i_em_j_(0,_1)
+existe_venda_de_i_em_j_(0,_2)
+existe_venda_de_i_em_j_(0,_3)
+existe_venda_de_i_em_j_(0,_4)
+existe_venda_de_i_em_j_(0,_5)
+existe_venda_de_i_em_j_(1,_0)
+existe_venda_de_i_em_j_(1,_1)
+existe_venda_de_i_em_j_(1,_2)
+existe_venda_de_i_em_j_(1,_3)
+existe_venda_de_i_em_j_(1,_4)
+existe_venda_de_i_em_j_(1,_5)
+existe_venda_de_i_em_j_(2,_0)
+existe_venda_de_i_em_j_(2,_1)
+existe_venda_de_i_em_j_(2,_2)
+existe_venda_de_i_em_j_(2,_3)
+existe_venda_de_i_em_j_(2,_4)
+existe_venda_de_i_em_j_(2,_5)
+existe_venda_de_i_em_j_(3,_0)
+existe_venda_de_i_em_j_(3,_1)
+existe_venda_de_i_em_j_(3,_2)
+existe_venda_de_i_em_j_(3,_3)
+existe_venda_de_i_em_j_(3,_4)
+existe_venda_de_i_em_j_(3,_5)
+End

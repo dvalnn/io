@@ -35,7 +35,7 @@ for i in Fab:
 for j in Cent:
     modelo += sum(x[(i, j)] for i in Fab) >= proc[j], "Procura_{}".format(j)
 
-# modelo += y[0]==1, 'Pontiac' #para a alinea 2, retirar esta restricao
+modelo += y[0] == 1, "Pontiac"  # para a alinea 2, retirar esta restricao
 
 # RESOLVER
 status = modelo.solve()

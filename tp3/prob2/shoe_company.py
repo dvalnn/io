@@ -48,3 +48,5 @@ if status == pulp.LpStatusOptimal:
             print(x[(i, j)], x[(i, j)].varValue)
 
     print("Valor otimo:", modelo.objective.value())
+    modelo.writeLP("SpencerShoeLP")  # creates LP file for the model
+ 

@@ -2,7 +2,7 @@ import pulp
 
 # Produção de Relógios para o aeroporto
 
-M = 10e5
+M = 10e5 # valor "muito elevado" para forçar a relação entre as variáveis
 
 # DADOS
 preço_venda = [[22, 22, 28, 28, 28, 30], [35, 35, 42, 42, 42, 42], [30, 30, 40, 40, 40, 45], [26, 26, 32, 32, 32, 28]]
